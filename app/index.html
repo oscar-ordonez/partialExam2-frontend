@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular JS Scaffold app.</title>
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- endinject -->
+
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bootstrap-css/css/bootstrap.min.css">
+    <!-- endinject -->
+  </head>
+  <body ng-app="AngularScaffold">
+    <div ng-controller = "NavbarController">
+    <div class="modal fade" id = "ventanaRegister">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title">Register</h4>
+          </div>
+          <div class="modal-body" ng-show="!$sessionStorage.currentUser">
+          <!--  <div class="form-group">
+              <label class="control-label">Foto: </label>
+              <input id="input-2" name="input2[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
+            </div>-->
+            <label for="foto">Foto de perfil:</label>
+            <div class = "divFoto" id="propic"></div>
+            <input class = "upload" type="file" id="imgup" class = "file" accept="image/*"></input>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" class="form-control" id="registerNombre" ng-model="user.name">
+            </div>
+            <div class="form-group">
+              <label for="usuario">Usuario:</label>
+              <input type="text" class="form-control" id="registerUsuario" ng-model="user.username">
+            </div>
+            <div class="form-group">
+              <label for="contrasena">Contraseña:</label>
+              <input type="password" class="form-control" id="registerContrasena" ng-model="user.password">
+            </div>
+            <div class="form-group">
+              <label for="re-contrasena">Confirmar contraseña:</label>
+              <input type="password" class="form-control" id="registerRe-contrasena" ng-model="user.re_password">
+            </div>
+            <div class="form-group">
+              <label for="correo">Correo:</label>
+              <input type="text" class="form-control" id="registerCorreo" ng-model="user.email">
+            </div>
+            <div class="form-group">
+              <label for="numero">Numero:</label>
+              <input type="text" class="form-control" id="registerNumero" ng-model="user.phone">
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-dismiss="modal" ng-click ="register()">Register</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div>
+  </body>
+
+  <!-- bower:js -->
+
+  <script src="/jquery/dist/jquery.js"></script>
+
+  <script src="/angular/angular.js"></script>
+
+  <script src="/angular-ui-router/release/angular-ui-router.js"></script>
+
+  <script src="/bootstrap-css/js/bootstrap.min.js"></script>
+
+  <script src="/ngstorage/ngStorage.js"></script>
+
+  <script src="/bootstrap/dist/js/bootstrap.js"></script>
+
+  <!-- endinject -->
+
+  <script src="app.js"></script>
+
+  <!-- inject:js -->
+  <script src="scripts/controllers/ClienteController.js"></script>
+  <script src="scripts/controllers/HomeController.js"></script>
+  <script src="scripts/controllers/navbarController.js"></script>
+  <script src="scripts/services/authService.js"></script>
+  <script src="scripts/services/ClienteService.js"></script>
+  <script src="scripts/services/HomeService.js"></script>
+  <!-- endinject -->
+</html>
