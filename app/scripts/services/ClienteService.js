@@ -1,7 +1,7 @@
 angular.module('AngularScaffold.Services').factory('ClienteService', ['$http',
 	function($http){
 		$http.defaults.withCredentials = true;
-		var baseUrl = 'https://oscar-ordonez-backend.herokuapp.com/';
+		var baseUrl = 'http://oscar-ordonez-backend.herokuapp.com/';
 		return {
 				UpdateUser: function(param,payload){
           return $http.post(baseUrl + "v1/updateUser/"+ param, payload);
