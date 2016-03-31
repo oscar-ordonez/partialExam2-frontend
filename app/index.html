@@ -12,6 +12,32 @@
     <!-- endinject -->
   </head>
   <body ng-app="AngularScaffold">
+
+
+    <div ng-controller="NavbarController">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid" >
+          <div class="navbar-header pull-right">
+            <form class="navbar-form navbar-right" role="search">
+              <div class="form-group" ng-show="!$sessionStorage.currentUser">
+                <input type="text" class="form-control" placeholder="username" ng-model="user.username">
+                <input type="password" class="form-control" placeholder="password" ng-model="user.password">
+                <button type="submit" class="btn btn-default" ng-click="login(user)">Log in</button>
+                <a href="#ventanaRegister" class="btn btn-primary btn" data-toggle="modal"> Registrar</a>
+              </div>
+              <div class="row">
+                  <button type="submit" class="btn btn-default" ng-click="logout()" ng-show="$sessionStorage.currentUser">Log out</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      <div ui-view></div>
+  </div>
+
+
     <div ng-controller = "NavbarController">
     <div class="modal fade" id = "ventanaRegister">
       <div class="modal-dialog">
