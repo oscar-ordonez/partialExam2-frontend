@@ -10,5 +10,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
             url: '/home',
             templateUrl: '/views/home.html',
             controller: 'HomeController'
+        })
+				.state('register', {
+            url: '/register',
+            templateUrl: '/views/register.html',
+            controller: 'RegisterController'
         });
 }])

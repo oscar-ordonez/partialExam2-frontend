@@ -23,7 +23,7 @@
                 <input type="text" class="form-control" placeholder="username" ng-model="user.username">
                 <input type="password" class="form-control" placeholder="password" ng-model="user.password">
                 <button type="submit" class="btn btn-default" ng-click="login(user)">Log in</button>
-                <a href="#ventanaRegister" class="btn btn-primary btn" data-toggle="modal"> Registrar</a>
+                <button type="submit" class="btn btn-default" ui-sref="register">Register</button>
               </div>
               <div class="row">
                   <button type="submit" class="btn btn-default" ng-click="logout()" ng-show="$sessionStorage.currentUser">Log out</button>
@@ -35,55 +35,13 @@
     </div>
     <div class="container">
       <div ui-view></div>
-  </div>
-
-
-    <div ng-controller = "NavbarController">
-    <div class="modal fade" id = "ventanaRegister">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h4 class="modal-title">Register</h4>
-          </div>
-          <div class="modal-body" ng-show="!$sessionStorage.currentUser">
-          <!--  <div class="form-group">
-              <label class="control-label">Foto: </label>
-              <input id="input-2" name="input2[]" type="file" class="file" multiple data-show-upload="false" data-show-caption="true">
-            </div>-->
-              <label for="nombre">Nombre:</label>
-              <input type="text" class="form-control" id="registerNombre" ng-model="user.name">
-            </div>
-            <div class="form-group">
-              <label for="usuario">Usuario:</label>
-              <input type="text" class="form-control" id="registerUsuario" ng-model="user.username">
-            </div>
-            <div class="form-group">
-              <label for="contrasena">Contraseña:</label>
-              <input type="password" class="form-control" id="registerContrasena" ng-model="user.password">
-            </div>
-            <div class="form-group">
-              <label for="re-contrasena">Confirmar contraseña:</label>
-              <input type="password" class="form-control" id="registerRe-contrasena" ng-model="user.re_password">
-            </div>
-            <div class="form-group">
-              <label for="correo">Correo:</label>
-              <input type="text" class="form-control" id="registerCorreo" ng-model="user.email">
-            </div>
-            <div class="form-group">
-              <label for="numero">Numero:</label>
-              <input type="text" class="form-control" id="registerNumero" ng-model="user.phone">
-            </div>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary" data-dismiss="modal" ng-click ="register()">Register</button>
-          </div>
-        </div><!-- /.modal-content -->
-      </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-  </div>
+    </div>
+    <footer>
+      <a href="https://github.com/oscar-ordonez/partialExam2-frontend.git" class="button">Github Frontend</a>
+      <a href="https://github.com/oscar-ordonez/partialExam2-backend.git" class="button">Github Backend</a>
+    </footer>
   </body>
+
 
   <!-- bower:js -->
 
@@ -107,7 +65,10 @@
   <script src="scripts/controllers/ClienteController.js"></script>
   <script src="scripts/controllers/HomeController.js"></script>
   <script src="scripts/controllers/navbarController.js"></script>
+  <script src="scripts/controllers/RegisterController.js"></script>
+
   <script src="scripts/services/authService.js"></script>
+
   <script src="scripts/services/ClienteService.js"></script>
   <script src="scripts/services/HomeService.js"></script>
   <!-- endinject -->
